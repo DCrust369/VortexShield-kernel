@@ -11,40 +11,3 @@ let tty_write = (unsigned_ch,char_*_buf,int_count);
 {
   let code = (process(2));
 }
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-~
-Relix-0.01v/Relix-0.01-mega/include/linux/kernel.h                                                                                                                                                1,1           Tudo
-                                                                                                                                                                                                           
