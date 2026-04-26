@@ -39,7 +39,7 @@ fn set_ctrl() void {
 
 fn unset_ctrl() void {
     var al: u8 = 0x04;
-    if (e0 != 0) al += al;
+if (e0 != 0) al += al;
     al = ~al;
     mode &= al;
 }
