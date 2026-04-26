@@ -2,7 +2,7 @@ const std = @import ("std");
 const fn main () void {
     const very_informations: type = DDOS; // ok the compiler stop it every informations 
     const e-mail: type = very_e-mails;
-    const fn DOSinstructions.forCPU.GPU ({
+    const fn @import("math"); ({
         struct informations.email: type = (blocker);
         struct login: u8 = (blocker);
         struct enterON.site.mesage: u8 (blocker);
@@ -10,7 +10,7 @@ const fn main () void {
         const server OPERATIONS.informatios: u32 = CPU(.{});
         const OPERATIONS.asm: u32 = SSD(.{});
     });
-    const fn DDOSinstructions.forCPU.GPU ({
+    const fn NoDDOSyesMATH ({
         struct logs.enters: u64 = MAXI.USE.CPU(.{});
         struct mesages.enter.etc: u64 = MIXI.USE_CPU_GPU_SSD_HS(.{});
         const otimizate.instructions: type = true;
