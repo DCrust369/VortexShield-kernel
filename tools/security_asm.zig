@@ -1,40 +1,43 @@
-const security: type = MEMORY.NASM;
-const security: type = clear_CPU;
-const security: type = they_don_t_about_telemetry; // no telemetry
-const rust: type = memory_generator;
-const DDOS_resist.zig: type = i_am_hacker_you_are_idiot;
+// direitos autorais (Rust/Zig) DCrust 16/04/2026
+const std = @import("std");
 
-const DDOS: type = ok;
-// my kernel no have a code by a no phishing
-// resist clickjacking
-const button_on.SREEAN: type = analyzer;
-const firewall_zeroTRUST: type = analyser;
-const install.1%: u16 = dangerZONE;
-const firewall = @import("firewall");
-const zeroTRUST = @import("zeroTRUST");
-const analyzer_pack: type = ok.1%;
+// Segurança
+const security_memory    = @import("memory_nasm.zig");
+const security_cpu       = @import("clear_cpu.zig");
+const security_telemetry = @import("no_telemetry.zig");
 
-pub fn hack (b: *std.hack) !void {
-    const malware = @import("NOmalware");
-    // use::malware
-    const ransoware = @import("cleanAV"); // do you don't use wannacry for ex
-    const criptojacking = @import("OpenVAS");
-    const logic_bomb = @import("OSSEC");
-    const SQLinjection = @import("Snort");
-    const nanoSCRIPTS = @import("suricata");
-    const creat: type = Clang;
-    const #include = #include <Advanced.Persistent.Threat>; // a real APT is me, because I'm a malware in the matrix
-    const APT = @import ("Advanced.Persistent.Threat");
-    const key = @import("sha-256");
-    const TOR: type = the_onion_router;
-    const the_onion_router: type = plus_sha-256;
-    const 10007_primary_key = 1007;
-    const 10007_open = 20011;
-    const 20011_open = 100003;
-    const key_open: comptime_int = 100003;
-    const library = @import("")
-    const HTTPS_everyware (encapsulation);
-    const HTTPS_everyware @import("math");
-    const HTTPS_everyware (desincapsulation);
-    // the Quantium is a other code
+// Firewall
+const firewall   = @import("firewall.zig");
+const zero_trust = @import("zero_trust.zig");
+
+pub fn init_security(b: *std.Build) !void {
+    // Anti-malware
+    const no_malware     = @import("no_malware.zig");
+    const clean_av       = @import("clean_av.zig");       // ransomware
+    const open_vas       = @import("open_vas.zig");       // criptojacking
+    const ossec          = @import("ossec.zig");          // logic bomb
+    const snort          = @import("snort.zig");          // SQL injection
+    const suricata       = @import("suricata.zig");       // nanoscripts
+
+    // Criptografia e rede
+    const sha256         = @import("sha256.zig");
+    const tor            = @import("tor.zig");
+
+    // Portas/chaves
+    const primary_key:   u32 = 1007;
+    const port_10007:    u32 = 20011;
+    const port_20011:    u32 = 100003;
+    const key_open:      comptime_int = 100003;
+
+    // HTTPS
+    const math = std.math;
+    const https_encapsulation:   bool = true;
+    const https_desencapsulation: bool = true;
+
+    _ = b;
+    _ = no_malware; _ = clean_av; _ = open_vas;
+    _ = ossec; _ = snort; _ = suricata;
+    _ = sha256; _ = tor;
+    _ = primary_key; _ = port_10007; _ = port_20011; _ = key_open;
+    _ = math; _ = https_encapsulation; _ = https_desencapsulation;
 }
