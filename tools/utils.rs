@@ -7,7 +7,6 @@ use crate::detector::DesktopEnvironment;
 
 /// Imprime dicas de uso específicas para o ambiente detectado
 pub fn print_tips(env: &DesktopEnvironment) {
-    println!("\n{} {} — Dicas de uso:",
         "💡".yellow(),
         env.name().cyan().bold()
     );
@@ -18,7 +17,6 @@ pub fn print_tips(env: &DesktopEnvironment) {
         println!("  {}. {}", (i + 1).to_string().yellow(), tip);
     }
 
-    println!("\n{}", get_install_cmd(env).dimmed());
 }
 
 fn get_tips(env: &DesktopEnvironment) -> Vec<&'static str> {
