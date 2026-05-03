@@ -1,41 +1,124 @@
-# VoidShield-Kernel
+# VortexShield Kernel
 
-A minimalist microkernel study inspired by the Linux kernel, built with modern systems programming languages.
+> *"It's not yet surprising, but it is functional."*
 
-## 📌 About the Project
+A minimalist microkernel built with modern systems programming languages, focused on **security**, **privacy**, and **memory safety**.
 
-Relix is an **experimental hobby** focused on operating system internals and microkernel architecture. It started as an exercise in rewriting critical kernel components from C to **Zig**, and has since evolved into a robust codebase dominated by **Rust**.
+---
 
-The goal of VoidShield-Kernel is to explore how a "minimalist core" can manage hardware resources while maintaining strict memory safety and stability.
+## 📌 About
+
+VortexShield started as a personal study project to understand operating system internals from the ground up. What began as an exercise in rewriting kernel components evolved into a full microkernel with its own security subsystem, anti-malware layer, and scripting environment.
+
+The project went through three naming stages before its current form:
+
+```
+Relix → Stax → VortexShield
+```
+
+The kernel was developed on **Fedora Linux** (migrated from Fedora 43 to 44) and is inspired by the philosophy that security should be built into the core — not added on top.
+
+---
 
 ## 🛠 Tech Stack
 
-Based on the current repository analysis:
+| Language | Role |
+|----------|------|
+| **Rust** | Core kernel logic, memory safety, scheduling, security modules |
+| **Zig** | Hardware Abstraction Layer (HAL), boot protocols, drivers |
+| **C** | Low-level kernel base, hardware interfacing |
+| **Assembly** | Boot-strapping, CPU-specific instructions, context switching |
+| **Lua** | Shell and terminal scripting layer |
+| **Leyernet** | Native kernel language — low-level control with beginner-friendly syntax |
 
-* **Rust (93.8%)**: Handles the core kernel logic, safe memory management, and high-level abstractions.
-* **Zig (25.3%)**: Used for the Hardware Abstraction Layer (HAL), boot protocols, and low-level "close-to-metal" efficiency.
-* **Assembly**: Initial boot-strapping and CPU-specific instructions.
-
-## 💻 operational system
-* I developed this kernel like this, I wanted to create a linux distro based on mint linux on a windows in 2025 but we have a problem the organization on my windows 11 NT so I was testing distros and * **exploring my first distro was parrot security but I didn't like it so I went to arch, nobara to void and pop!_OS and I liked fedora - Native SELinux - Super updated kernel - pure GNOME so I used * * * **fedora 43 and migrated to fedora 44 the first version of this kernel was called Relix then it went to stax then VortexShield Kernel
+---
 
 ## 🏗 Architecture
 
-Relix follows the **Microkernel** philosophy:
-* **Minimalist Core**: Only essential services run in supervisor mode.
-* **Isolation**: Drivers and system services are designed to run in user space to prevent total system failure in case of a crash.
+VortexShield follows the **Microkernel** philosophy:
+
+- **Minimalist Core** — only essential services run in supervisor mode
+- **Isolation** — drivers and system services run in user space, preventing total system failure on crash
+- **Multi-arch** — active porting to `x86_64`, `ARM`, and `RISC-V`
+
+### Directory Structure
+
+```
+VortexShield/
+├── kernel/
+│   ├── boot.C                  # Boot stage
+│   ├── boot_face.rs            # Boot interface
+│   ├── fork.rs                 # Process management
+│   ├── keyboard.zig            # Keyboard driver
+│   ├── serial.zig              # Serial communication
+│   ├── security.rs             # Kernel-level security
+│   ├── time.rs                 # Time management
+│   ├── wake_up_C_arm.asm       # ARM wake-up routine
+│   └── kitDEV/                 # Dev toolkit
+├── NoMalware/
+│   ├── ResistMalware.zig       # Active malware resistance
+│   ├── buffer_over_malware.C   # Buffer overflow counter-attack
+│   └── scamMALWARE.config.rs  # Scam/malware detection config
+├── drives_PC/
+│   ├── driver_hardware.zig     # Hardware drivers
+│   ├── drives_library.C        # Driver library
+│   └── offline_library.C       # Offline support
+├── tools/
+│   ├── main.rs                 # Entry point
+│   ├── security_asm.zig        # Security assembly tools
+│   ├── detector.rs             # Threat detection
+│   └── ...
+└── leyernet_programming_language/
+    └── ...                     # Leyernet compiler and docs
+```
+
+---
+
+## 🔒 Security Model
+
+VortexShield treats security as architecture, not an afterthought:
+
+- **`ResistDDoS.zig`** — DDoS resistance at kernel level, before packets reach userspace
+- **`buffer_over_malware.C`** — detects malware and uses buffer overflow against it
+- **`ResistMalware.zig`** — active malware resistance layer
+- **`security.rs`** — core kernel security enforcement
+- **`scamMALWARE.config.rs`** — behavioral scam and malware detection
+
+---
+
+## 🌐 Leyernet Language
+
+Leyernet is a programming language developed alongside VortexShield. Its goal is to give beginners the same low-level control as Assembly, with a more approachable syntax.
+
+```
+Assembly  →  total control, hostile syntax
+C         →  close to metal, abstracts too much
+Leyernet  →  control of Assembly, readable by beginners
+```
+
+---
 
 ## 🚀 Status: Work in Progress
 
-This is currently a **personal study project**. 
-- **Current focus**: Memory allocation and Task Scheduling.
-- **Next steps**: Implementing a stable Inter-Process Communication (IPC) mechanism.
+| Component | Status |
+|-----------|--------|
+| Kernel core | ✅ Functional |
+| NoMalware subsystem | ✅ Active |
+| x86_64 support | ✅ Primary target |
+| ARM port | 🔧 In progress |
+| RISC-V port | 🔧 In progress |
+| Memory allocator | 🔧 In progress |
+| Task scheduling | 🔧 In progress |
+| IPC mechanism | 📋 Planned |
+| Leyernet compiler | 🔧 In progress |
 
-> "It's not yet surprising, but it is functional."
+---
 
 ## 📜 License
 
-This project is licensed under the **MIT License** - see the LICENSE file for details.
+This project is licensed under the **MIT License** — see the `LICENSE` file for details.
 
 ---
-*Developed as a hobby by **DCrust369**. No warranties provided, just pure engineering curiosity.*
+
+*Developed by **DCrust369** — built in Portugal, distributed on the Onion network.*  
+*No warranties provided. Just pure engineering curiosity.*
