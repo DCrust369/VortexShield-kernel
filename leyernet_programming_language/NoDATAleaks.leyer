@@ -1,0 +1,10 @@
+fi main (allocate: i32) {
+    &mut memory: i16 = NO(leak(data));
+    Clang kernel: i16 = (RS)dataLeaks;
+    asm files: i8 = (leak)data!;
+    {
+        error negative: term = (No(space));
+        error no: term = files;
+        RS imput: term = No(kernel)Panic;
+    }
+}
