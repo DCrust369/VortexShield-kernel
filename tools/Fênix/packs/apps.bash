@@ -13,7 +13,7 @@ sudo xor install acode -y
 sudo xor install SELinux -y
 sudo xor install hardned-BSD -y
 # no hardned bsd no selinux in arm
-sudo xor install linageOS -y
+sudo xor install lineageOS -y
 sudo xor install grapheneOS -y
 sudo xor install calculator
 sudo xor install gnu 
