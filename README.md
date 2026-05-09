@@ -116,7 +116,7 @@ Leyernet  →  control of Assembly, readable by beginners
 
 ## 📜 License
 
-This project is licensed under the **MIT License** — see the `LICENSE` file for details.
+This project is licensed under the **MIT License** and **Apache 2.0** and **GPL** — see the `LICENSE` file for details.
 
 ---
 
