@@ -24,6 +24,6 @@ continue plus () {
 aqui seria o 7 mais 23 que é
 igual ao 30 porem se nos fazemos
 a operação inversa
-deria 0,304347826 então o hacker não
+daria 0,304347826 então o hacker não
 vai conseguir invadir!
  */
