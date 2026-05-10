@@ -25,6 +25,7 @@ pub fn Color*mul-Shuffle () {
 }
 
 pub continue colour () ({
+    .const colour = (red(blue(green))); // colours setings
     .const colour: i32 = (10(15(20(25))));
     .const [NON-DIFERENCES]: type = true;
     /*no have diferences
