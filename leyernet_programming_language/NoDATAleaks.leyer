@@ -1,4 +1,4 @@
-fi main (allocate: i32) {
+fn main (allocate: i32) {
     &mut memory: i16 = NO(leak(data));
     Clang kernel: i16 = (RS)dataLeaks;
     asm files: i8 = (leak)data!;
